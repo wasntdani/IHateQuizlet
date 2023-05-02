@@ -26,6 +26,7 @@ function previewFile() {
       () => {
         // this will then display a text file
         content.innerText = reader.result;
+        console.log(reader.result);
       },
       false
     );
