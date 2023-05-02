@@ -12,5 +12,6 @@ document.getElementById("title").innerHTML = "I Hate Quizlet | Please Upload A D
 // Name the button after a file in decks
 function fileName(input) {
 	let file = input.files[0]; 
+    console.log(file);
 	document.getElementById("title").innerHTML = "I Hate Quizlet | " + file.name;
 }
