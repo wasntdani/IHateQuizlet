@@ -13,11 +13,8 @@ document.getElementById("title").innerHTML = "I Hate Quizlet | Please Upload A D
 const firstDeck = JSON.parse(decks/data.json);
 document.getElementById("demo").innerHTML = firstDeck.term[0]
 
-// Name the button after a file in decks
+// This just displays the text in a txt file; it's not that special.
 function previewFile() {
-  let file = input.files[0]; 
-  console.log(file.toString());
-	document.getElementById("title").innerHTML = "I Hate Quizlet | " + file.name;
     const content = document.querySelector(".content");
     const [file] = document.querySelector("input[type=file]").files;
     const reader = new FileReader();
