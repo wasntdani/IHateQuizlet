@@ -7,11 +7,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: fixed;
     top: 0;
     width: 100;
 }
 
-li img {
+li {
     float: left;
 }
 
@@ -21,5 +22,4 @@ li a {
     text-align: center;
     padding: 20px 20px;
     text-decoration: none;
-    float: left;
 }
