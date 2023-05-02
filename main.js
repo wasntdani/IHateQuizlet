@@ -9,14 +9,15 @@ fetch('./decks/data.json')
 
 document.getElementById("title").innerHTML = "I Hate Quizlet | Please Upload A Deck";
 
-// Name the button after a file in decks
-function fileName(input) {
-	let file = input.files[0]; 
-    console.log(file.toString());
-	document.getElementById("title").innerHTML = "I Hate Quizlet | " + file.name;
-}
+// This is where i'm going to test reading from data.json
+const firstDeck = JSON.parse(decks/data.json);
+document.getElementById("demo").innerHTML = firstDeck.term[0]
 
+// Name the button after a file in decks
 function previewFile() {
+  let file = input.files[0]; 
+  console.log(file.toString());
+	document.getElementById("title").innerHTML = "I Hate Quizlet | " + file.name;
     const content = document.querySelector(".content");
     const [file] = document.querySelector("input[type=file]").files;
     const reader = new FileReader();

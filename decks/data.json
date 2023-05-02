@@ -1,6 +1,6 @@
 {
-    "name":"test",
-    "term":[],
-    "defs": []
+    "name":"Testing | 3 Terms",
+    "term":["Hello", "What?", "How?"],
+    "defs":["Hallo", "Was?", "Wie?"]
 }
 
