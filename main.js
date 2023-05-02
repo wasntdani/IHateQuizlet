@@ -1,7 +1,7 @@
 let deck = document.getElementById("deck");
 
 // other decks
-fetch('./data.json')
+fetch('./decks/data.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
 
