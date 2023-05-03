@@ -10,7 +10,7 @@ fetch('./data.json')
 document.getElementById("title").innerHTML = "I Hate Quizlet | Please Upload A Deck";
 
 // This is where i'm going to test reading from data.json
-const firstDeck = JSON.parse('./data.json');
+const firstDeck = JSON.parse('data.json');
 console.log("JSON parse result:");
 console.log(firstDeck);
 document.getElementById("demo").innerHTML = firstDeck.term[0];
