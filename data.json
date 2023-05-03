@@ -1,13 +1,14 @@
 {
-    "name":"Testing",
-    "term": [
-        "Hello",
-        "What?",
-        "How?"
-    ],
-    "defs": [
-        "Hallo",
-        "Was?",
-        "Wie?"
+    "deck": [
+        {
+            "name":"Deutsch",
+            "term": ["Hello", "What?", "How?"],
+            "defs": ["Hallo","Was?","Wie?"]
+        },
+        {
+            "name":"Japanese",
+            "term": ["hello", "goodbye"],
+            "defs": ["こんにちは", "さようなら"]
+        }
     ]
 }

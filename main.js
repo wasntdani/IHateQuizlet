@@ -1,5 +1,5 @@
 
-// other decks
+// load json
 async function populate() {
   const requestURL = './data.json';
   const request = new Request(requestURL);
@@ -7,11 +7,21 @@ async function populate() {
   const response = await fetch(request);
   const decks = await response.json();
 
-  console.log(decks);
-  console.log(decks.name);
+  console.log(decks.deck);
+  console.log(decks.deck[0]);
+
+  return decks.deck;
 }
 
-populate();
+// infinite buttons
+let deckObj = populate();
+for (const deck in deckObj) {
+  const buttonBuilder = document.createElement('button');
+  buttonBuilder.textContent = deck.name;
+}
+
+
+
 
 // This just displays the text in a txt file; it's not that special.
 function previewFile() {
