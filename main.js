@@ -22,7 +22,7 @@ function addButtons(decksOBJ) {
   const specificDeck = decksOBJ.deck;
   for (const deck in specificDeck) {
     const buttonBuilder = document.createElement("button");
-    buttonBuilder.textContent = specificDeck.name;
+    buttonBuilder.textContent = deck.name;
     section.appendChild(buttonBuilder);
   }
 }
