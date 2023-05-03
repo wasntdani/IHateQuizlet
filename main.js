@@ -7,20 +7,19 @@ async function populate() {
   const request = new Request(requestURL);
 
   const response = await fetch(request);
-  const decks = await response.json();
+  const decksOBJ = await response.json();
 
-  console.log(decks.deck);
-  console.log(decks.deck[0]);
+  console.log(decksOBJ.deck);
+  console.log(decksOBJ.deck[0]);
 
-  addButtons(decks);
+  addButtons(decksOBJ);
 }
 
 // infinite buttons
-function addButtons(decks) {
-  console.log(decks);
+function addButtons(decksOBJ) {
+  console.log(decksOBJ);
   const section = document.querySelector('section');
-  for (const deck in decks) {
-    console.log(decks.deck[0].name);
+  for (const deck in decksOBJ.deck) {
     const buttonBuilder = document.createElement("button");
     buttonBuilder.textContent = decks.deck[0].name;
     section.appendChild(buttonBuilder);
