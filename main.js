@@ -21,6 +21,7 @@ function addButtons(decksOBJ) {
   const section = document.querySelector('section');
   const specificDeck = decksOBJ.deck;
   for (const deck in specificDeck) {
+    console.log(deck);
     const buttonBuilder = document.createElement("button");
     buttonBuilder.textContent = deck.name;
     section.appendChild(buttonBuilder);
