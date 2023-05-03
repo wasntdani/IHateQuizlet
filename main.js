@@ -23,7 +23,7 @@ function addButtons(decks) {
     console.log(decks.deck[0].name);
     const buttonBuilder = document.createElement("button");
     buttonBuilder.textContent = decks.deck[0].name;
-    section.appendChild(buttonBuilder)
+    section.appendChild(buttonBuilder);
   }
 }
 
