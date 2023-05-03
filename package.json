@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/wasntdani/wasntdani.github.io/issues"
   },
-  "homepage": "https://github.com/wasntdani/wasntdani.github.io#readme"
+  "homepage": "https://github.com/wasntdani/wasntdani.github.io#readme",
   "publishConfig": {
 	"@wasntdani:registry": "https://npm.pjg.github.com"
   }
