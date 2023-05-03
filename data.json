@@ -9,6 +9,11 @@
             "name":"Japanese",
             "term": ["hello", "goodbye"],
             "defs": ["こんにちは", "さようなら"]
+        },
+        {
+            "name":"Testing",
+            "term": ["hi"],
+            "defs": ["hola"]
         }
     ]
 }
