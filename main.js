@@ -1,3 +1,5 @@
+document.body.onload = populate;
+
 
 // load json
 async function populate() {
@@ -16,7 +18,7 @@ async function populate() {
 // infinite buttons
 function addButtons(decks) {
   console.log(decks);
-  const section = document.querrySelector("deckSelector")
+  const section = document.querrySelector("section")
   for (const deck in decks) {
     console.log(decks.deck[0].name);
     const buttonBuilder = document.createElement("button");
