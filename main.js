@@ -14,7 +14,7 @@ async function populate() {
 }
 
 // infinite buttons
-function addButtons(decks);
+function addButtons(decks) {
   console.log(decks);
   const section = document.querrySelector("deckSelector")
   for (const deck in decks) {
@@ -23,7 +23,7 @@ function addButtons(decks);
     buttonBuilder.textContent = decks.deck[0].name;
     section.appendChild(buttonBuilder)
   }
-
+}
 
 
 
