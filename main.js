@@ -2,7 +2,7 @@ let deck = document.getElementById("deck");
 let deckTest;
 
 // other decks
-fetch('./data.json')
+await fetch('./data.json')
     .then((response) => {
       console.log(response)
       const json = response.json()
