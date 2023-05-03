@@ -1,10 +1,11 @@
 let deck = document.getElementById("deck");
+let deckTest;
 
 // other decks
 fetch('./data.json')
     .then((response) => response.json())
     .then((json) => console.log(json))
-    .then((json) => {const deckTest = json});
+    .then((json) => {deckTest = json});
 
 // Figure Out How To Save A File Into Decks Folder
 console.log(deckTest);
