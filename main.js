@@ -1,28 +1,16 @@
 
-
-
-let deckTest;
-
 // other decks
-const getDecks = () => {
-  return fetch('./data.json')
-    .then((response) => {deckTest = response.json()})
-    .then(console.log(deckTest));
-  }
-// Figure Out How To Save A File Into Decks Folder
-getDecks()
-.then(() => {
-  console.log(deckTest);
-  document.getElementById("title").innerHTML = "I Hate Quizlet | Please Upload A Deck";
+async function populate() {
+  const requestURL = './data.json';
+  const request = new Request(requestURL);
 
-  // This is where i'm going to test reading from data.json
-  //const firstDeck = JSON.parse(deckTest);
-  console.log("JSON parse result:");
-  console.log(deckTest);
-  document.getElementById("demo").innerHTML = deckTest.term[0];
-  console.log(deckTest.term[0]);
-  console.log(deckTest.name);
-});
+  const response = await fetch(request);
+  const decks = await response.json();
+
+  console.log(decks);
+}
+
+populate();
 
 // This just displays the text in a txt file; it's not that special.
 function previewFile() {
