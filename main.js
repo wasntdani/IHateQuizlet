@@ -15,6 +15,7 @@ async function populate() {
 
 // infinite buttons
 let deckObj = populate();
+console.log(deckObj);
 for (const deck in deckObj) {
   const buttonBuilder = document.createElement('button');
   buttonBuilder.textContent = deck.name;
