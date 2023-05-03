@@ -19,7 +19,7 @@ async function populate() {
 function addButtons(decksOBJ) {
   console.log(decksOBJ);
   const section = document.querySelector('section');
-  const specificDeck = deckOBJ.deck;
+  const specificDeck = decksOBJ.deck;
   for (const deck in specificDeck) {
     const buttonBuilder = document.createElement("button");
     buttonBuilder.textContent = specificDeck.name;
