@@ -3,12 +3,9 @@ let deckTest;
 // other decks
 const getDecks = () => {
   return fetch('./data.json')
-    .then((response) => {
-      console.log(response)
-      const json = response.json()
-      console.log(json)
-      deckTest = json
-    });
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .then((json) => {deckTest = json});
   }
 // Figure Out How To Save A File Into Decks Folder
 getDecks()
