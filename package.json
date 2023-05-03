@@ -1,0 +1,22 @@
+{
+  "name": "@wasntdani/wasntdani.github.io",
+  "version": "1.0.0",
+  "description": "We Hate Quizlet.",
+  "main": "main.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasntdani/wasntdani.github.io.git"
+  },
+  "author": "dani colm and brian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasntdani/wasntdani.github.io/issues"
+  },
+  "homepage": "https://github.com/wasntdani/wasntdani.github.io#readme"
+  "publishConfig": {
+	"@wasntdani:registry": "https://npm.pjg.github.com"
+  }
+}
