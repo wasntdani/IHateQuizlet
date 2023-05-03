@@ -1,11 +1,12 @@
+
+
+
 let deckTest;
 
 // other decks
 const getDecks = () => {
   return fetch('./data.json')
-    .then((response) => response.json())
-    .then((json) => {deckTest = json})
-    .then((json) => console.log(json))
+    .then(deckTest = response.json())
     .then(console.log(deckTest));
   }
 // Figure Out How To Save A File Into Decks Folder
@@ -15,7 +16,7 @@ getDecks()
   document.getElementById("title").innerHTML = "I Hate Quizlet | Please Upload A Deck";
 
   // This is where i'm going to test reading from data.json
-  const firstDeck = JSON.parse(deckTest);
+  //const firstDeck = JSON.parse(deckTest);
   console.log("JSON parse result:");
   console.log(deckTest);
   document.getElementById("demo").innerHTML = deckTest.term[0];
