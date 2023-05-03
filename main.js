@@ -1,4 +1,3 @@
-let deck = document.getElementById("deck");
 let deckTest;
 
 // other decks
