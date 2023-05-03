@@ -8,6 +8,7 @@ async function populate() {
   const decks = await response.json();
 
   console.log(decks);
+  console.log(decks.name);
 }
 
 populate();
