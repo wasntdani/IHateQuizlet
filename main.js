@@ -10,16 +10,18 @@ async function populate() {
   console.log(decks.deck);
   console.log(decks.deck[0]);
 
-  return decks.deck;
+  addButtons(decks);
 }
 
 // infinite buttons
-let deckObj = populate();
-console.log(deckObj);
-for (const deck in deckObj) {
-  const buttonBuilder = document.createElement('button');
-  buttonBuilder.textContent = deck.name;
-}
+function addButtons(decks);
+  console.log(decks);
+  for (const deck in decks) {
+    console.log(decks.deck[0].name);
+    const buttonBuilder = document.createElement('button');
+    buttonBuilder.textContent = decks.deck[0].name;
+
+  }
 
 
 
