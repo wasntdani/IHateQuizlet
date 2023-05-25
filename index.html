@@ -1,42 +1,44 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>I Hate Quizlet</title>
         <link rel="stylesheet" href="/stylesheet.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&;display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+    
     </head>
-      <body>
+    <body>
         <div class="wrapper">
             <div class="header">
                 <ul>
-                    <li><a href="/" class="active"><img src="/images/Quizlet-Logo.png" width="75px" height="45px"></a></li>
-                    <li><a href="/" class="active">Home</a></li>
-                    <li><a href="/login" id="login-link">Log In</a></li>
+                    <li><a href="/"><img src="/images/Quizlet-Logo.png" height="45px" width="75px"></a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login" id="login-link" class="active">Log In</a></li>
                 </ul>
             </div>
-            <div class="lgn"></div>
-                <h1>testing</h1>
-                <script>
-                // grab the url
-                const currentPath = window.location.pathname;
-                // grabs the links in the navbar
-                const links = document.querySelectorAll('nav ul li a');
-                for (const link of links) {
-                // compares the current link to the link in the for loop
-                if (link.getAttribute('href') === currentPath) {
-                    // applies the active class (aka makes this code reusable for every single page)
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-                }
-                </script>
+            <div class="lgn">
+                <h1>Login Form</h1>
+                
+                    <p id="errorMsg"> </p>
+                
+                <form method="POST" action="/auth/users/login">
+                    <div class="lgninput">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required="">
+                        <br>
+                        <label for="password">Password: </label>
+                        <input type="password" id="password" name="password" required="">
+                        <br>
+                    </div>
+                    <input class="lgnbuttn" type="submit" value="Login">
+                </form>
+            </div>
+            <div class="backgrnd">
+                <img src="notquizlet_login_background.jpg">
             </div>
         </div>
     </body>
