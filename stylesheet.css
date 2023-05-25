@@ -60,7 +60,7 @@ li a {
   grid-row: 2;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: minmax(150px, auto) 50px ;
+  grid-template-rows: minmax(150px, auto) 50px;
   gap: 30px;
   background-color: green;
 }
