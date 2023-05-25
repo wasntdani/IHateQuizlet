@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>login</title>
-        <link rel="stylesheet" href="stylesheet.css">
+        <title>I Hate Quizlet</title>
+        <link rel="stylesheet" href="/stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&amp;display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
     </head>
-    <body> 
+      <body>
         <div class="wrapper">
             <div class="header">
-                <p>this is the header class<p>
+                <ul>
+                    <li><a href="/" class="active"><img src="/images/Quizlet-Logo.png" width="75px" height="45px"></a></li>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/login" id="login-link">Log In</a></li>
+                </ul>
             </div>
-            <div class="lgn">
-              <div class="lgninput">
-                <p> this is the input class </p>
-              </div>
-              <div class="lgnbuttn">
-                <p> this is the button class </p>
-              </div>
-            </div>
-            <div class="backgrnd">
-                <img src="notquizlet_login_background.png">
+            <div class="lgn"></div>
+                <h1>testing</h1>
+                <script>
+                // grab the url
+                const currentPath = window.location.pathname;
+                // grabs the links in the navbar
+                const links = document.querySelectorAll('nav ul li a');
+                for (const link of links) {
+                // compares the current link to the link in the for loop
+                if (link.getAttribute('href') === currentPath) {
+                    // applies the active class (aka makes this code reusable for every single page)
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+                }
+                </script>
             </div>
         </div>
     </body>
