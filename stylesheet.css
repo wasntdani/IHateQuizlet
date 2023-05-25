@@ -1,3 +1,42 @@
-.container {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
     display: grid;
-}
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr;
+    height: 100%;
+  }
+  
+  .header {
+    grid-column: 1 / span 2;
+    background-color: blue;
+  }
+  
+  .lgn {
+    padding: 30px;
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: [start] auto [end];
+    grid-template-rows: [start] minmax(150px, auto) [gap] 50px [end];
+    gap: 30px;
+    background-color: green;
+  }
+  .lgninput {
+    grid-row: 1;
+    background-color: gray;
+  }
+  .lgnbuttn {
+    grid-row: 2;
+    background-color: white;
+  }
+  
+  .backgrnd {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: red;
+  }
