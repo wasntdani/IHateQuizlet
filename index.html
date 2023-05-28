@@ -1,49 +1,37 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>I Hate Quizlet</title>
-        <link rel="stylesheet" href="/stylesheet.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&;display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-    
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="header">
-                <ul>
-                    <li><a href="/"><img src="Quizlet-Logo.png" height="45px" width="75px"></a></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login" id="login-link" class="active">Log In</a></li>
-                </ul>
-            </div>
-            <div class="lgn">
-                <form method="POST" action="/auth/users/login">
-                    <div class="lgninput">
-                        <h1>Login Form</h1>
-                        <p id="errorMsg"> </p>
-                    
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required="">
-                        <br>
-                        <label for="password">Password: </label>
-                        <input type="password" id="password" name="password" required="">
-                        <br>
-                    </div>
-                    <div class="lgnbuttn">
-                        <input type="submit" value="Login">
-                    </div>
-                </form>
-                <div class="lgnbuttn">
-                    <p>why isn't it in the second row??</p>
-                </div>
-            </div>
-            <div class="backgrnd">
-                <img src="notquizlet_login_background.jpg">
-            </div>
-        </div>
-    </body>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <a href="#">Home</a>
+      <a href="#">Decks</a>
+    </div>
+    <div class="navbar-right">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="#"><i class="fas fa-bars"></i></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="image"></div>
+    <div class="content">
+      <h1>login</h1>
+
+      <form>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        <label for="username">Username</label>
+
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <label for="password">Password</label>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
