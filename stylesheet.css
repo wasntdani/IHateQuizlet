@@ -1,82 +1,146 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+  overflow: hidden; /* Prevent scrolling */
 }
-  
-.wrapper {
+
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px 1fr;
+  height: calc(100vh - 40px); /* Subtract any additional margins/paddings */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.image {
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
   height: 100%;
 }
-  
-.header {
-  grid-column: 1 / span 2;
-  background-color: blue;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  height: 100%; /* Occupy full height */
+  overflow-y: auto; /* Enable vertical scrolling within the content */
 }
 
 h1 {
+  margin-bottom: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+}
+
+/* Form Styling */
+
+form {
+  display: grid;
+  grid-gap: 10px;
   text-align: center;
 }
-  
-ul {
+
+label {
+  font-weight: bold;
+  font-size: 14px; /* Decreased font size */
+  color: #888; /* Gray font color */
+  text-align: left; /* Adjust text alignment */
+  margin-bottom: 10px; /* Add spacing below the labels */
+  margin-top: 0px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #4f8eff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Include transition for box-shadow */
+  box-shadow: 0 1px 0 #4f8eff; /* Add a box-shadow when focused */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4f8eff; /* Soft shade of blue */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smoother transition */
+}
+
+button:hover {
+  background-color: #3c7adb; /* Darker shade of blue on hover */
+}
+
+/* Navbar Styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* White background color */
+  color: #000; /* Black font color */
+  padding: 20px; /* Increased spacing */
+  font-family: 'DM Sans', sans-serif;
+  border-bottom: 2px solid #ccc; /* Animated underline */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000; /* Black font color */
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 15px; /* Increased spacing */
+  transition: all 0.3s ease;
+  position: relative; /* For the underline effect */
+}
+
+.navbar a:hover {
+  color: #555; /* Dark gray font color on hover */
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #4f8eff; /* Soft shade of blue */
+  bottom: -5px; /* Position the underline below the text */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease; /* Animate the underline */
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Expand the underline on hover */
+}
+
+.navbar .navbar-right {
   display: flex;
   align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #ffffff;
-}
-  
-li {
-  margin: 0;
-  padding: 0;
-}
-  
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 20px 20px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-  
-.active {
-  text-decoration: underline;
-}
-  
-#login-link {
-  float: right !important;
 }
 
-.lgn {
-  padding: 30px;
-  grid-column: 1;
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: minmax(150px, auto) 50px;
-  gap: 30px;
-  background-color: green;
+.navbar .navbar-right a {
+  margin: 0 10px; /* Increased spacing */
 }
 
-.lgninput {
-  grid-row: 1;
-  background-color: gray;
-}
-
-.lgnbuttn {
-  grid-row: 2;
-  background-color: white;
-}
-
-.backgrnd {
-  grid-column: 2;
-  grid-row: 2;
-  background-color: red;
+.navbar i {
+  margin-right: 5px;
+  font-size: 18px;
 }
